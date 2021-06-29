@@ -4,6 +4,8 @@ let modelIsLoading = true;
 let crownImage;
 
 const FOREHEAD_POINT = 151;
+const LEFT_FORHEAD = 104;
+const RIGHT_FOREHEAD = 333;
 
 // p5 function
 function preload() {
@@ -46,7 +48,6 @@ function draw() {
   if (latestPrediction == null) return; // don't draw anything else
   // get forhead location
   let foreheadLocation = latestPrediction.scaledMesh[FOREHEAD_POINT];
-  console.log(foreheadLocation);
 
   image(
     crownImage,
@@ -54,5 +55,16 @@ function draw() {
     foreheadLocation[1 /* y */] - 50,
     100,
     100
+  );
+
+  // ---------------------
+  let leftForeheadLocation = latestPrediction.scaledMesh[LEFT_FORHEAD];
+  let rightForeheadLocation = latestPrediction.scaledMesh[RIGHT_FOREHEAD];
+
+  line(
+    leftForeheadLocation[0 /* x */],
+    leftForeheadLocation[1 /* y */],
+    rightForeheadLocation[0 /* x */],
+    rightForeheadLocation[1 /* y */]
   );
 }
