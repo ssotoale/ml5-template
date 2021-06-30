@@ -42,29 +42,36 @@ function draw() {
   // show a loading screen
 
   // draw webcam video
+  imageMode(CORNER);
   image(video, 0, 0, width, height);
 
   //-----------------------------------
   if (latestPrediction == null) return; // don't draw anything else
-  // get forhead location
+
+  // get forhead locations
   let foreheadLocation = latestPrediction.scaledMesh[FOREHEAD_POINT];
-
-  image(
-    crownImage,
-    foreheadLocation[0 /* x */] - 50,
-    foreheadLocation[1 /* y */] - 50,
-    100,
-    100
-  );
-
-  // ---------------------
   let leftForeheadLocation = latestPrediction.scaledMesh[LEFT_FORHEAD];
   let rightForeheadLocation = latestPrediction.scaledMesh[RIGHT_FOREHEAD];
 
-  line(
+  let foreheadWidth = dist(
     leftForeheadLocation[0 /* x */],
     leftForeheadLocation[1 /* y */],
     rightForeheadLocation[0 /* x */],
     rightForeheadLocation[1 /* y */]
+  );
+
+  console.log(foreheadWidth);
+
+  let crownWidth = foreheadWidth * 3;
+
+  let crownHeight = (crownImage.height / crownImage.width) * crownWidth;
+
+  imageMode(CENTER);
+  image(
+    crownImage,
+    foreheadLocation[0 /* x */],
+    foreheadLocation[1 /* y */] - crownHeight / 2,
+    crownWidth /* width */,
+    crownHeight /* height */
   );
 }
