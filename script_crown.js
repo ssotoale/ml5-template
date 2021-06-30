@@ -45,8 +45,8 @@ function draw() {
   imageMode(CORNER);
   image(video, 0, 0, width, height);
 
+  if (!latestPrediction) return; // don't draw anything else
   //-----------------------------------
-  if (latestPrediction == null) return; // don't draw anything else
 
   // get forhead locations
   let foreheadLocation = latestPrediction.scaledMesh[FOREHEAD_POINT];

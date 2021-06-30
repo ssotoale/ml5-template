@@ -31,7 +31,7 @@ function draw() {
   // draw webcam video
   image(video, 0, 0, width, height);
 
-  if (latestPrediction == null) return; // don't draw anything else
+  if (!latestPrediction) return; // don't draw anything else
   //-----------------------------------
 
   // set the lipstick color
