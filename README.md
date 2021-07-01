@@ -1,24 +1,27 @@
-# Assignment 2: Make a reverse-engineered Snap Lens
+## Reversed Engineered Akali Snap Lens
 
-Here are the requirements: 
+### Description
+Virtually put on Akali's helmet and when you raise your arm it changes the tint. Made with <3 using ML5 and P5.js with the Snap Engineering Academy. 
 
-1. VARIABLES: Based on a poseNet keypoint position (this is an object with a x and y property) in ml5, activate at least one change in p5.js (display an image,run an animation,change the screen in some way, etc.).
-2. EVENTS: Write some logic so that when an event happens (if you raise your hand, or if you make a certain gesture, etc.), activate at least one change in p5.js.
+### Demo
 
-## Here are the javascript templates in this repo that you can use!
+![](https://i.imgur.com/jqMqrPt.gif)
 
-1. [Nose Brush using ml5 PoseNet](./script_nosebrush.js)
-2. [Body Lens using ml5 PoseNet](./script_posenet.js)
-3. [Face Lens using ml5 Face API](./script_faceapi.js)
-4. [Face Lens using ml5 Face Mesh](./script_facemesh.js)
+<img src="[](https://i.imgur.com/jqMqrPt.gif)" width=200><br>
 
+### Installation 
+* Not sure yet
 
-## Get started
+### License
+The MIT License
 
-1. Select one javascript template above. 
-2. Change line 15 of the [index.html](index.html) file to the name of your template!
-4. Run your code locally using `http-server` or the `VSCode Go Live` option.
-5. Sometimes you may need to hard-refresh for your changes to load. In those cases, use `COMMAND + SHIFT + R`.
+### Citation
+* Ashwin's and Jenny's debugging. 
+* Facemesh
+* Posenet
+
+### Contact
+* 👻 pinche.samantha
 
 ## Here are templates and resources you can find elsewhere.
 1. [Here are all of ml5 templates for p5!](https://editor.p5js.org/ml5/sketches)
