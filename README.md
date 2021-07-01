@@ -6,6 +6,7 @@ Virtually put on Akali's helmet and when you raise your arm it changes the tint.
 ### Demo
 
 ![Imgur](https://i.imgur.com/jqMqrPt.gif)
+![Imgur](assets/akali.gif)
 
 <img src="[Imgur](https://i.imgur.com/jqMqrPt.gif)" width=200><br>
 
