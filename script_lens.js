@@ -28,6 +28,13 @@ function setup() {
   let facemesh = ml5.facemesh(video, () => {
     console.log("Model is ready!");
     modelIsLoading = false;
+    poseNet = ml5.poseNet(video, { flipHorizontal: true });
+    // This sets up an event that fills the global variable "poses"
+    // with an array every time new poses are detected
+    poseNet.on("pose", function (results) {
+      poses = results;
+
+    });
   });
 
   // ml5 function
@@ -39,14 +46,14 @@ function setup() {
     latestPrediction = results[0];
   });
   // Create a new poseNet method with a single detection
-  poseNet = ml5.poseNet(video, { flipHorizontal: true });
-  // This sets up an event that fills the global variable "poses"
-  // with an array every time new poses are detected
-  poseNet.on("pose", function (results) {
-    poses = results;
-    console.log(poses);
-    console.log("poses")
-  });
+  // poseNet = ml5.poseNet(video, { flipHorizontal: true });
+  // // This sets up an event that fills the global variable "poses"
+  // // with an array every time new poses are detected
+  // poseNet.on("pose", function (results) {
+  //   poses = results;
+  //   console.log(poses);
+  //   console.log("poses")
+  // });
   // Hide the video element, and just show the canvas
   video.hide();
 
@@ -123,7 +130,7 @@ function draw() {
   // background('rgba(100%,0%,100%,0.5)');
   lightness('yellow');
 
-  // updateKeypoints();
+  updateKeypoints();
 
   // drawKeypoints();
   let leftWristPosition = interpolatedKeypoints[9];
