@@ -15,7 +15,7 @@ Virtually put on Akali's helmet and when you raise your arm it changes the tint.
 
 ### Github Page
 * Instructions to use on github pages:
-1. Go to this link: 
+1. Go to this link: https://ssotoale.github.io/ml5-template/
 2. Make sure your camera is the computer's default camera and allow it in your browser
 3. Raise both your hands halfway in order to change it to darkness
 4. Put your hands back down to make it daytime again! 
